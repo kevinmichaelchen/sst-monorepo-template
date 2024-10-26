@@ -1,6 +1,19 @@
-# Monorepo Template
+# SST Monorepo Template
 
-A template to create a monorepo SST ❍ Ion project.
+A better SST monorepo template.
+
+- Initially forked from [`sst-monorepo`][sst-monorepo].
+- Influenced by [OrbitKit][orbitkit].
+- Uses [TurboRepo][turborepo].
+- Compiles packages for [optimal LSP performance][lsp].
+- Uses [Biome][biome] instead of Prettier and ESLint (see [benchmarks][biome-benchmarks]).
+
+[biome]: https://biomejs.dev/
+[biome-benchmarks]: https://github.com/biomejs/biome/blob/cli/v1.9.4/benchmark/README.md
+[lsp]: https://orbitkit.dev/decision-reasoning/why-all-built#the-orbitkit-approach
+[orbitkit]: https://github.com/ixahmedxi/orbitkit
+[sst-monorepo]: https://github.com/sst/monorepo-template
+[turborepo]: https://turbo.build/repo/docs
 
 ## Get started
 

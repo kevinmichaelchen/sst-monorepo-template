@@ -10,13 +10,17 @@
     "packages/config/*"
   ],
   "scripts": {
-    "sst": "sst --"
+    "sst": "sst --",
+    "biome:check": "bunx biome check --write infra packages",
+    "biome:lint": "bunx biome lint --write infra packages",
+    "biome:write": "bunx biome format --write infra packages"
   },
   "dependencies": {
     "sst": "^3"
   },
   "devDependencies": {
     "@acme/tsconfig": "workspace:^",
+    "@biomejs/biome": "1.9.4",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^22.5.2",
     "pkg-types": "^1.2.0",
