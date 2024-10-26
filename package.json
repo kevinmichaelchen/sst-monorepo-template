@@ -1,15 +1,29 @@
 {
-  "name": "monorepo-template",
-  "version": "0.0.0",
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {},
-  "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
-    "typescript": "5.6.2"
+  "name": "coyote",
+  "private": true,
+  "description": "Web services for Acme Corporation's leading product, Coyote",
+  "license": "MIT",
+  "author": "Acme Corporation",
+  "type": "module",
+  "workspaces": ["packages/*", "packages/config/*"],
+  "scripts": {
+    "sst": "sst --",
+    "biome:check": "bunx biome check --write infra packages",
+    "biome:lint": "bunx biome lint --write infra packages",
+    "biome:write": "bunx biome format --write infra packages"
   },
   "dependencies": {
+    "lefthook": "^1.8.1",
     "sst": "^3"
-  }
+  },
+  "devDependencies": {
+    "@acme/tsconfig": "workspace:^",
+    "@biomejs/biome": "1.9.4",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^22.5.2",
+    "pkg-types": "^1.2.0",
+    "turbo": "^2.2.3",
+    "typescript": "5.6.2"
+  },
+  "packageManager": "pnpm@9.12.2"
 }

@@ -1,12 +1,17 @@
 {
-  "name": "@monorepo-template/scripts",
+  "name": "@acme/scripts",
   "version": "0.0.0",
-  "dependencies": {
-    "@monorepo-template/core": "*",
-    "sst": "*"
-  },
+  "type": "module",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "check-types": "tsc --noEmit",
     "shell": "sst shell tsx"
+  },
+  "dependencies": {
+    "@acme/core": "workspace:^",
+    "sst": "*"
   },
   "devDependencies": {
     "@types/node": "^20.14.11",
