@@ -1,8 +1,21 @@
 {
-  "name": "@monorepo-template/functions",
+  "name": "@acme/functions",
   "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "check-types": "tsc --noEmit"
+  },
   "dependencies": {
-    "@monorepo-template/core": "*",
+    "@acme/core": "workspace:^",
     "sst": "*"
   },
   "devDependencies": {

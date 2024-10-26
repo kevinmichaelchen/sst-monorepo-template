@@ -1,6 +1,15 @@
 # JetBrains
 .idea
 
+# TurboRepo
+.turbo
+
+# Built TS
+dist
+
+# TypeScript cache
+*.tsbuildinfo
+
 # dependencies
 node_modules
 
